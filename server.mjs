@@ -9,7 +9,7 @@ const app = express();
 app.get("/", async (req, resp) => {
   let weather;
   let error;
-  console.log(req.query);
+  // console.log(req.query);
   if (req.query.cityName) {
     const params = new URLSearchParams({
       q: req.query.cityName,
@@ -18,7 +18,7 @@ app.get("/", async (req, resp) => {
     });
 
     const url = `https://api.openweathermap.org/data/2.5/weather?${params}`;
-    console.log(url);
+    // console.log(url);
     try {
       const apiRequest = await fetch(url);
       weather = await apiRequest.json();

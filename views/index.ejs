@@ -7,6 +7,9 @@
   </head>
   <body>
     <div class="container">
+      <header>
+        <h1>A Simple weather app using node js</h1>
+      </header>
       <fieldset>
         <form action="/">
           <input
@@ -15,22 +18,19 @@
             class="user-input"
             placeholder="Enter a City"
             required
-            value="<%= cityName %>"
+            value=""
           />
           <input type="submit" class="user-button" value="Get Weather" />
         </form>
         <% if(weather){ %>
-        <p><%= JSON.stringify(weather) %></p>
+        <p>
+          The current temperature in <%= weather.name %> is <%=weather.main.temp
+          %> degree Fahrenheit
+        </p>
         <% } %> <% if(error){ %>
         <p><%= error %></p>
         <% } %>
       </fieldset>
-      <% if(weather){ %>
-      <p>
-        The current temperature in <%= weather.name %> is <%=weather.main.temp
-        %> degree Fahrenheit
-      </p>
-      <% } %>
     </div>
   </body>
 </html>
