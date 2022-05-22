@@ -25,6 +25,12 @@
         <p><%= error %></p>
         <% } %>
       </fieldset>
+      <% if(weather){ %>
+      <p>
+        The current temperature in <%= weather.name %> is <%=weather.main.temp
+        %> degree Fahrenheit
+      </p>
+      <% } %>
     </div>
   </body>
 </html>
