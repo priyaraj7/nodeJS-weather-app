@@ -31,5 +31,4 @@ Navigate to `http://localhost:5000/` and enter the city name. You will get the o
 
 ![screenshot](./weather.png)
 
-Note:
-Server runs on http://localhost:5000
+
